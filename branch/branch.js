@@ -1,0 +1,1 @@
+console.log(filter1(arr1, "stuff"))
