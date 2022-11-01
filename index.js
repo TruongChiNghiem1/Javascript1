@@ -57,23 +57,49 @@ function myFunction(item){
     return `<li id = '${item.id}'>${item.item}</li>`;
 }
 
-//Sua doi
-arr7 = [
-    {id: 1, item: 'apple', type: 'fruit'},
-    {id: 2, item: 'banana', type: 'fruit'},
-    {id: 3, item: 'pen', type: 'stuff'},
-    {id: 4, item: 'phone', type: 'stuff'}
-    ]
+console.log(filter1(arr1, "stuff"))
 
-function filter1(arr5, string){
-    const kq = arr5.filter(arr7 => arr1.type == string);
-    return kq.map(myFunction);
-}
+// //Sua doi
+// arr7 = [
+//     {id: 1, item: 'apple', type: 'fruit'},
+//     {id: 2, item: 'banana', type: 'fruit'},
+//     {id: 3, item: 'pen', type: 'stuff'},
+//     {id: 4, item: 'phone', type: 'stuff'}
+//     ]
 
-function myFunction(item){
-    //return [item.id, item.item].join("<li id = ");
-    //return "<li id = '" + item.id + "'>" + item.item + "</li>";
-    return `<li id = '${item.id}'>${item.item}</li>`;
-}
+// function filter1(arr5, string){
+//     const kq = arr5.filter(arr7 => arr1.type == string);
+//     return kq.map(myFunction);
+// }
 
-console.log(filter1(arr7, "stuff"))
+// function myFunction(item){
+//     //return [item.id, item.item].join("<li id = ");
+//     //return "<li id = '" + item.id + "'>" + item.item + "</li>";
+//     return `<li id = '${item.id}'>${item.item}</li>`;
+// }
+
+// console.log(filter1(arr7, "stuff"))
+
+// // Load the full build.
+var _ = require('lodash');
+// // Load the core build.
+// var _ = require('lodash/core');
+// // Load the FP build for immutable auto-curried iteratee-first data-last methods.
+// var fp = require('lodash/fp');
+ 
+// // Load method categories.
+// var array = require('lodash/array');
+// var object = require('lodash/fp/object');
+ 
+// // Cherry-pick methods for smaller browserify/rollup/webpack bundles.
+// var at = require('lodash/at');
+// var curryN = require('lodash/fp/curryN');
+
+var array = [1];
+var other = _.concat(array, 2, [3], [[4]]);
+ 
+console.log(other);
+// => [1, 2, 3, [4]]
+ 
+console.log(array);
+// => [1]
